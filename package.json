@@ -1,0 +1,45 @@
+{
+  "name": "canvas-callout",
+  "version": "1.0.0",
+  "description": "A tool for AI tagging",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "rimraf dist && pnpm run build-bundle -w",
+    "build": "rimraf dist && run-s build-bundle build-types",
+    "build-bundle": "rollup --config rollup.config.ts --configPlugin typescript",
+    "build-types": "run-s build-types-temp build-types-pre-patch build-types-roll build-types-post-patch build-types-check",
+    "build-types-temp": "tsc --emitDeclarationOnly --outDir temp/node -p src/node",
+    "build-types-pre-patch": "tsx scripts/prePatchTypes.ts",
+    "build-types-roll": "api-extractor run && rimraf temp",
+    "build-types-post-patch": "tsx scripts/postPatchTypes.ts",
+    "build-types-check": "tsc --project tsconfig.check.json",
+    "lint": "eslint --cache --ext .ts src/**",
+    "format": "prettier --write --cache --parser typescript \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "AI",
+    "Canvas",
+    "Typescript",
+    "Rollup"
+  ],
+  "author": "ChildQjj",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "24.1.0-0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^18.15.3",
+    "rimraf": "^4.4.0",
+    "rollup": "~3.19.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
