@@ -17,13 +17,15 @@
     "build-types-check": "tsc --project tsconfig.check.json",
     "lint": "eslint --cache --ext .ts src/**",
     "format": "prettier --write --cache --parser typescript \"src/**/*.ts\"",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "tsx scripts/release.ts"
   },
   "keywords": [
     "AI",
-    "Canvas",
-    "Typescript",
-    "Rollup"
+    "canvas",
+    "typescript",
+    "rollup",
+    "frontend"
   ],
   "author": "ChildQjj",
   "license": "MIT",
@@ -34,6 +36,7 @@
     "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/node": "^18.15.3",
+    "conventional-changelog-cli": "^2.2.2",
     "rimraf": "^4.4.0",
     "rollup": "~3.19.1",
     "tslib": "^2.5.0",
