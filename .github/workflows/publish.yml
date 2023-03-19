@@ -30,6 +30,11 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
+      - name: Install run-all
+        run: pnpm install npm-run-all -g
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+
       - name: Publish package
         run: pnpm run ci-publish ${{ github.ref_name }}
         env:
