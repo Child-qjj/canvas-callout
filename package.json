@@ -1,6 +1,6 @@
 {
   "name": "canvas-callout",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tool for AI tagging",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
