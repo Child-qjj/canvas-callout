@@ -10,7 +10,6 @@ import {
   getVersionChoices,
   isDryRun,
   logRecentCommits,
-  packages,
   run,
   runIfNotDry,
   step,
@@ -20,12 +19,7 @@ import {
 async function main(): Promise<void> {
   let targetVersion: string | undefined
 
-  const { pkg }: { pkg: string } = await prompts({
-    type: 'select',
-    name: 'pkg',
-    message: 'Select package',
-    choices: packages.map((i) => ({ value: i, title: i }))
-  })
+  const pkg: string = 'canvas-callout'
 
   if (!pkg) return
 

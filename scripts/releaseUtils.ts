@@ -20,14 +20,6 @@ if (isDryRun) {
   console.log()
 }
 
-export const packages = [
-  'vite',
-  'create-vite',
-  'plugin-legacy',
-  'plugin-react',
-  'plugin-vue',
-  'plugin-vue-jsx'
-]
 
 export const versionIncrements: ReleaseType[] = [
   'patch',
@@ -51,7 +43,8 @@ export function getPackageInfo(pkgName: string): {
   pkgPath: string
   currentVersion: string
 } {
-  const pkgDir = __dirname
+  const pkgDir = process.cwd()
+  
   
   const pkgPath = path.resolve(pkgDir, 'package.json')
   const pkg: Pkg = require(pkgPath)
