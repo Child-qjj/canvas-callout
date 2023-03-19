@@ -18,7 +18,8 @@
     "lint": "eslint --cache --ext .ts src/**",
     "format": "prettier --write --cache --parser typescript \"src/**/*.ts\"",
     "prepublishOnly": "npm run build",
-    "release": "tsx scripts/release.ts"
+    "release": "tsx scripts/release.ts",
+    "ci-publish": "tsx scripts/publishCI.ts"
   },
   "keywords": [
     "AI",
@@ -35,10 +36,21 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.0.0",
+    "@types/execa": "^2.0.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/minimist": "^1.2.2",
     "@types/node": "^18.15.3",
+    "@types/prompts": "^2.4.3",
+    "@types/semver": "^7.3.13",
     "conventional-changelog-cli": "^2.2.2",
+    "execa": "^7.1.1",
+    "fs-extra": "^11.1.0",
+    "minimist": "^1.2.8",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
     "rimraf": "^4.4.0",
     "rollup": "~3.19.1",
+    "semver": "^7.3.8",
     "tslib": "^2.5.0",
     "typescript": "^5.0.2"
   },
