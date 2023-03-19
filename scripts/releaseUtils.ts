@@ -169,6 +169,8 @@ export async function publishPackage(
   if (tag) {
     publicArgs.push(`--tag`, tag)
   }
+  console.log();
+  
   await runIfNotDry('npm', publicArgs, {
     cwd: pkdDir
   })
