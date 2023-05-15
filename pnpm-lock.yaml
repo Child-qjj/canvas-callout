@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@rollup/plugin-commonjs': 24.1.0
+  '@rollup/plugin-commonjs': 25.0.0
   '@rollup/plugin-json': ^6.0.0
   '@rollup/plugin-node-resolve': ^15.0.2
   '@rollup/plugin-terser': ^0.4.1
@@ -34,7 +34,7 @@ specifiers:
   typescript: ^5.0.4
 
 devDependencies:
-  '@rollup/plugin-commonjs': 24.1.0_rollup@3.20.2
+  '@rollup/plugin-commonjs': 25.0.0_rollup@3.20.2
   '@rollup/plugin-json': 6.0.0_rollup@3.20.2
   '@rollup/plugin-node-resolve': 15.0.2_rollup@3.20.2
   '@rollup/plugin-terser': 0.4.1_rollup@3.20.2
@@ -433,8 +433,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@rollup/plugin-commonjs/24.1.0_rollup@3.20.2:
-    resolution: {integrity: sha512-eSL45hjhCWI0jCCXcNtLVqM5N1JlBGvlFfY0m6oOYnLCJ6N0qEXoZql4sY2MOUArzhH4SA/qBpTxvvZp2Sc+DQ==}
+  /@rollup/plugin-commonjs/25.0.0_rollup@3.20.2:
+    resolution: {integrity: sha512-hoho2Kay9TZrLu0bnDsTTCaj4Npa+THk9snajP/XDNb9a9mmjTjh52EQM9sKl3HD1LsnihX7js+eA2sd2uKAhw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.68.0||^3.0.0
