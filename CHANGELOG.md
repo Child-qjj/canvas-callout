@@ -16,3 +16,4 @@
 ### Reverts
 
 - add 'graphiteWidth' option ([f32e218](https://github.com/Child-qjj/canvas-callout/commit/f32e218b764a7ed3e7382e97fc4c404b0e239967))
+- feat(pencil): add 'graphiteWidth' option ([ca6de7e](https://github.com/Child-qjj/canvas-callout/commit/ca6de7e889fa2a5fbfe774a5b772e205bb4cefdb))
