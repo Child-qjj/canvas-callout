@@ -27,7 +27,8 @@
     "format": "prettier --write --cache --parser typescript \"src/**/*.ts\"",
     "prepublishOnly": "npm run build",
     "release": "tsx scripts/release.ts",
-    "ci-publish": "tsx scripts/publishCI.ts"
+    "ci-publish": "tsx scripts/publishCI.ts",
+    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path ."
   },
   "keywords": [
     "AI",
