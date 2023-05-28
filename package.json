@@ -28,7 +28,7 @@
     "prepublishOnly": "npm run build",
     "release": "tsx scripts/release.ts",
     "ci-publish": "tsx scripts/publishCI.ts",
-    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path ."
+    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "keywords": [
     "AI",
