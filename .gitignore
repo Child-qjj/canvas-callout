@@ -1,2 +1,9 @@
-node_modules/
-dist/
+.DS_Store
+.idea
+*.cpuprofile
+*.local
+*.log
+/.vscode/
+dist
+node_modules
+.eslintcache
