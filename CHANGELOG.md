@@ -12,3 +12,7 @@
 ### Performance Improvements
 
 - empty CHANGELOG.md ([b51e52b](https://github.com/Child-qjj/canvas-callout/commit/b51e52b18fccb4f00d45f65d14693eb458e99ce4))
+
+### Reverts
+
+- add 'graphiteWidth' option ([f32e218](https://github.com/Child-qjj/canvas-callout/commit/f32e218b764a7ed3e7382e97fc4c404b0e239967))
