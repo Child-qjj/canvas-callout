@@ -3,6 +3,7 @@
 ### Bug Fixes
 
 - A bug fix ([f7258e0](https://github.com/Child-qjj/canvas-callout/commit/f7258e00930be74fa3a4c06a4d614a0affb34498))
+- add graphiteWidth option ([e6b5cf5](https://github.com/Child-qjj/canvas-callout/commit/e6b5cf573a6f577760d12351f655b5f0d3d05a9d))
 
 ### Features
 
