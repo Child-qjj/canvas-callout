@@ -1,0 +1,99 @@
+{
+  "name": "canvas-callout",
+  "version": "1.1.0",
+  "description": "A tool for AI tagging",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "dev": "rimraf dist && pnpm run build-bundle -w",
+    "postinstall": "simple-git-hooks",
+    "build": "rimraf dist && run-s build-bundle",
+    "build-bundle": "rollup --config rollup.config.ts --configPlugin typescript",
+    "build-types": "run-s build-types-temp build-types-pre-patch build-types-roll build-types-post-patch build-types-check",
+    "build-types-temp": "tsc --emitDeclarationOnly --outDir temp/node -p src/node",
+    "build-types-pre-patch": "tsx scripts/prePatchTypes.ts",
+    "build-types-roll": "api-extractor run && rimraf temp",
+    "build-types-post-patch": "tsx scripts/postPatchTypes.ts",
+    "build-types-check": "tsc --project tsconfig.check.json",
+    "lint": "eslint --cache --ext .ts src/**",
+    "format": "prettier --write --cache --parser typescript \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build",
+    "release": "tsx scripts/release.ts",
+    "ci-publish": "tsx scripts/publishCI.ts"
+  },
+  "keywords": [
+    "AI",
+    "canvas",
+    "typescript",
+    "rollup",
+    "frontend"
+  ],
+  "author": "ChildQjj",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "25.0.0",
+    "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/fs-extra": "^11.0.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.16.16",
+    "@types/prompts": "^2.4.4",
+    "@types/semver": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.41.0",
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-regexp": "^1.15.0",
+    "execa": "^7.1.1",
+    "fs-extra": "^11.1.1",
+    "lint-staged": "^13.2.2",
+    "minimist": "^1.2.8",
+    "npm-run-all": "^4.1.5",
+    "picocolors": "^1.0.0",
+    "prettier": "^2.8.8",
+    "prompts": "^2.4.2",
+    "rimraf": "^5.0.1",
+    "rollup": "~3.23.0",
+    "rollup-plugin-serve": "^2.0.2",
+    "semver": "^7.5.1",
+    "simple-git-hooks": "^2.8.1",
+    "tslib": "^2.5.2",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "src**/*.ts": [
+      "eslint --cache --fix"
+    ],
+    "src/**/*.d.ts": [
+      "eslint --cache --fix"
+    ]
+  },
+  "packageManager": "pnpm@7.32.5"
+}
