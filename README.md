@@ -1,3 +1,7 @@
 # canvas-callout
 
-文档修改
+```
+  install by
+
+  pnpm installl
+```

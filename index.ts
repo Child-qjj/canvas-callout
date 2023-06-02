@@ -1,6 +1,5 @@
-class Canvas {
-  constructor(options: string) {
-    console.log(options)
-  }
-}
-const canvas = new Canvas('test')
+import browser from './src/browser'
+import node from './src/node'
+
+const isBrowser = typeof window === 'object'
+export default isBrowser ? browser : node
