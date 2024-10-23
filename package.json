@@ -47,7 +47,7 @@
     "@rollup/plugin-typescript": "^11.1.2",
     "@types/fs-extra": "^11.0.1",
     "@types/minimist": "^1.2.2",
-    "@types/node": "^18.16.19",
+    "@types/node": "^20.17.0",
     "@types/prompts": "^2.4.4",
     "@types/semver": "^7.5.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
@@ -76,7 +76,7 @@
     "typescript": "^5.1.6"
   },
   "engines": {
-    "node": ">=v18.16.1"
+    "node": ">=20.18.0"
   },
   "files": [
     "dist"
